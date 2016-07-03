@@ -1,0 +1,12 @@
+#
+# Gitignore
+#
+
+# log files
+*.log
+
+# IntelliJ IDEA project folder
+.idea
+
+# Node.js packages
+node_modules
