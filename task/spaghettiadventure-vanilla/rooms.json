@@ -1,197 +1,163 @@
-[
-	{
-		"id": "inTheHallOfFame",
-		"name": "In the Hall of Fame",
-		"question": [
-		  {
-		    "state": {
-		      
-		    }, 
-		    "action": {
-		      "text": "\nYou've just entered to the hall of fame where you see many heros and their weapons.\n A door opens immediately in front of you and after a while the walls starts to move.\n Do you try to get a weapon (sword) before running through the door?\n"
-		    }
-		  }  
-		],
-		"answers": [
-			{
-				"state": {
-					"answer": true
-				},
-				"action": {
-					"weapon": true,
-					"next": "inTheThroatOfTheGreatLion"
-				} 
-			},
-			{
-				"state": {
-					"answer": false
-				},
-				"action": {
-					"next": "inTheThroatOfTheGreatLion"
-				} 
-			}
-		]
-	},
-	{
-		"id": "inTheThroatOfTheGreatLion",
-		"name": "In the Throat of the Great Lion",
-		"question": [
-		  {
-		    "state": {
-		      "weapon": true
-		    }, 
-		    "action": {
-		      "text": "\nYou've just entered to the room of the Great Lion and it sees you. You have a weapon so starts to attack you to save its own life.\n Do you drop your weapon down immediately?\n"
-		    }
-		  },
-		  {
-		    "state": {
-		      "weapon": false
-		    }, 
-		    "action": {
-		      "text": "\nYou've just entered to the room of the Great Lion and it sees you. You don't have a weapon so it starts to approach you smoothly.\n Do you pet the Great Lion?\n"
-		    }
-		  } 
-		],
-    "answers": [
-    	{
-    		"state": {
-    			"weapon": true,
-    			"answer": true
-    		}, 
-    		"action": {
-    			"text": "The Great Lion let you take your weapon back and pass through.\n",
-    			"next": "inTheLandlordsSecretChamber"
-    		}
-    	},
-    	{
-    		"state": {
-    			"weapon": false,
-    			"answer": true
-    		}, 
-    		"action": {
-    			"weapon": true,
-    			"text": "The Great Lion gave you a weapon for such kindness.\n",
-    			"next": "inTheLandlordsSecretChamber"
-    		}
-    	},
-    	{
-    		"state": {
-    			"weapon": true,
-    			"answer": false
-    		}, 
-    		"action": {
-    			"text": "You poor... What did you think? You cannot defeat the Great Lion.\n",
-    			"next": "inTheCemetery"
-    		}
-    	},
-    	{
-    		"state": {
-    			"weapon": false,
-    			"answer": false
-    		}, 
-    		"action": {
-    			"text": "The Great Lion is sad but let you to pass through.\n",
-    			"next": "inTheLandlordsSecretChamber"
-    		}
-    	}
-    ]
-	},
-	{
-		"id": "inTheLandlordsSecretChamber",
-		"name": "In the Landlords Secret Chamber",
-		"question": [
-		  {
-		    "state": {
-		      
-		    }, 
-		    "action": {
-		      "text": "\nYou've just entered the Landlord's Secret Chamber and you see him standing against you.\n Do you attack him immediately without waiting for his first reaction?\n"
-		    }
-		  }
-		],
-		"answers": [
-			{
-    		"state": {
-    			"answer": true
-    		}, 
-    		"action": {
-    			"text": "Landlord is defeated.\n",
-    			"next": "inTheHallOfFate"
-    		}
-    	}, 
-    	{
-    		"state": {
-    			"answer": false
-    		}, 
-    		"action": {
-    			"text": "The Landlord is a damn man and attacked you immediately. You need to run...\n",
-    			"next": "inTheThroatOfTheGreatLion"
-    		}
-    	}
-		]
-	}, 
-	{
-		"id": "inTheHallOfFate", 
-		"name": "In the Hall of Fate",
-		"question": [
-		  {
-		    "state": {
-		      
-		    }, 
-		    "action": {
-		      "text": "\nYou've just arrived to the Hall of Fate and a mid-age man asks you.\n Do you belive in the Many-Face God?\n"
-		    }
-		  }
-		],
-		"answers": [
-			{
-				"state": {
-					"answer": true
-				}, 
-				"action": {
-					"next": "inTheHeaven"
-				}
-			},
-			{
-				"state": {
-					"answer": false
-				}, 
-				"action": {
-					"text": "Damn wanderer you are lost without real fate, you don't deserve to live.\n",
-					"next": "inTheCemetery"
-				}
-			}
-		]
-	},
-	{
-		"id": "inTheHeaven", 
-		"name": "In the Heaven",
-		"question": [
-		  {
-		    "state": {
-		      
-		    }, 
-		    "action": {
-		      "text": "\nYou reached the Heaven with fate and pride.\nCongratulation!\nEND."
-		    }
-		  }
-		],
-		"answers": []
-	},
-	{
-		"id": "inTheCemetery", 
-		"name": "In the Cemetery",
-		"question": [
-		  {
-		    "state": {
-		      
-		    }, 
-		    "action": {
-		      "text": "\nYou are dead forever, 6 feet under.\nYou failed.\nEND."
-		    }
-		  }
-		],
-		"answers": []
-	}
-]
+[{
+	"id": "inTheHallOfFame",
+	"name": "In the Hall of Fame",
+	"question": [{
+		"state": {
+
+		},
+		"action": {
+			"text": "\nYou've just entered to the hall of fame where you see many heros and their weapons.\n A door opens immediately in front of you and after a while the walls starts to move.\n Do you try to get a weapon (sword) before running through the door?\n"
+		}
+	}],
+	"answers": [{
+		"state": {
+			"answer": true
+		},
+		"action": {
+			"weapon": true,
+			"next": "inTheThroatOfTheGreatLion"
+		}
+	}, {
+		"state": {
+			"answer": false
+		},
+		"action": {
+			"next": "inTheThroatOfTheGreatLion"
+		}
+	}]
+}, {
+	"id": "inTheThroatOfTheGreatLion",
+	"name": "In the Throat of the Great Lion",
+	"question": [{
+		"state": {
+			"weapon": true
+		},
+		"action": {
+			"text": "\nYou've just entered to the room of the Great Lion and it sees you. You have a weapon so starts to attack you to save its own life.\n Do you drop your weapon down immediately?\n"
+		}
+	}, {
+		"state": {
+			"weapon": false
+		},
+		"action": {
+			"text": "\nYou've just entered to the room of the Great Lion and it sees you. You don't have a weapon so it starts to approach you smoothly.\n Do you pet the Great Lion?\n"
+		}
+	}],
+	"answers": [{
+		"state": {
+			"weapon": true,
+			"answer": true
+		},
+		"action": {
+			"text": "The Great Lion let you take your weapon back and pass through.\n",
+			"next": "inTheLandlordsSecretChamber"
+		}
+	}, {
+		"state": {
+			"weapon": false,
+			"answer": true
+		},
+		"action": {
+			"weapon": true,
+			"text": "The Great Lion gave you a weapon for such kindness.\n",
+			"next": "inTheLandlordsSecretChamber"
+		}
+	}, {
+		"state": {
+			"weapon": true,
+			"answer": false
+		},
+		"action": {
+			"text": "You poor... What did you think? You cannot defeat the Great Lion.\n",
+			"next": "inTheCemetery"
+		}
+	}, {
+		"state": {
+			"weapon": false,
+			"answer": false
+		},
+		"action": {
+			"text": "The Great Lion is sad but let you to pass through.\n",
+			"next": "inTheLandlordsSecretChamber"
+		}
+	}]
+}, {
+	"id": "inTheLandlordsSecretChamber",
+	"name": "In the Landlords Secret Chamber",
+	"question": [{
+		"state": {
+
+		},
+		"action": {
+			"text": "\nYou've just entered the Landlord's Secret Chamber and you see him standing against you.\n Do you attack him immediately without waiting for his first reaction?\n"
+		}
+	}],
+	"answers": [{
+		"state": {
+			"answer": true
+		},
+		"action": {
+			"text": "Landlord is defeated.\n",
+			"next": "inTheHallOfFate"
+		}
+	}, {
+		"state": {
+			"answer": false
+		},
+		"action": {
+			"text": "The Landlord is a damn man and attacked you immediately. You need to run...\n",
+			"next": "inTheThroatOfTheGreatLion"
+		}
+	}]
+}, {
+	"id": "inTheHallOfFate",
+	"name": "In the Hall of Fate",
+	"question": [{
+		"state": {
+
+		},
+		"action": {
+			"text": "\nYou've just arrived to the Hall of Fate and a mid-age man asks you.\n Do you belive in the Many-Face God?\n"
+		}
+	}],
+	"answers": [{
+		"state": {
+			"answer": true
+		},
+		"action": {
+			"next": "inTheHeaven"
+		}
+	}, {
+		"state": {
+			"answer": false
+		},
+		"action": {
+			"text": "Damn wanderer you are lost without real fate, you don't deserve to live.\n",
+			"next": "inTheCemetery"
+		}
+	}]
+}, {
+	"id": "inTheHeaven",
+	"name": "In the Heaven",
+	"question": [{
+		"state": {
+
+		},
+		"action": {
+			"text": "\nYou reached the Heaven with fate and pride.\nCongratulation!\nEND."
+		}
+	}],
+	"answers": []
+}, {
+	"id": "inTheCemetery",
+	"name": "In the Cemetery",
+	"question": [{
+		"state": {
+
+		},
+		"action": {
+			"text": "\nYou are dead forever, 6 feet under.\nYou failed.\nEND."
+		}
+	}],
+	"answers": []
+}]
